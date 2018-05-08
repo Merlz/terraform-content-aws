@@ -13,6 +13,8 @@ module "storage" {
 }
 
 module "networking" {
-  source   = "./networking"
-  vpc_cidr = "${var.vpc_cidr}"
+  source       = "./networking"
+  vpc_cidr     = "${var.vpc_cidr}"
+  public_cidrs = "${var.public_cidrs}"
+  accessip     = "${var.accessip}"
 }
